@@ -3,7 +3,7 @@
 If you are trying to hack a hardware it is necessary to have a backup of flash memories on the hardware. I use a module based on FT232H for this purpuse.
 FT232H (or FT2232H) can read and write NOR flash memories through SPI interface.
 
-![image](https://github.com/m3y54m/nor-flash-ft232h/assets/1549028/4141005e-8237-452d-9b51-b7c07e2b40a7)
+![image](https://github.com/m3y54m/nor-flash-ft232h/assets/1549028/ef8c88b0-681e-415e-99a0-42ec8996b7ec)
 
 ## Hardware Connection
 
