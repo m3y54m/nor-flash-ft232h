@@ -31,13 +31,15 @@ sudo apt-get install binwalk
 
 ## `flashrom`
 
-Read from NOR flash and dump to `dump.bin`:
+flashrom is a utility for identifying, reading, writing, verifying and erasing flash chips. It is designed to flash BIOS/EFI/coreboot/firmware/optionROM images on mainboards, network/graphics/storage controller cards, and various other programmer devices.
+
+### Read from NOR flash and dump to `dump.bin`:
 
 ```bash
 flashrom -p ft2232_spi:type=232H,port=A -r dump.bin
 ```
 
-Write to NOR flash from `dump.bin`:
+### Write to NOR flash from `dump.bin`:
 
 ```bash
 flashrom -p ft2232_spi:type=232H,port=A -w dump.bin
@@ -45,13 +47,19 @@ flashrom -p ft2232_spi:type=232H,port=A -w dump.bin
 
 ## `binwalk`
 
+You can analyze and interpret the contents of th dumped data using the `binwalk` tool.
+
 ```bash
 binwalk dump.bin
 ```
 
+![image](https://github.com/m3y54m/nor-flash-ft232h/assets/1549028/e873b3e6-7297-49e0-b549-c6c57d16818b)
+
 ## Resources
 
 - [Practical Reverse Engineering Part 4 - Dumping the Flash](https://jcjc-dev.com/2016/06/08/reversing-huawei-4-dumping-flash/)
+- [flashrom](https://flashrom.org)
 - [FTDI 2232H Breakout For Hardware Hacking](https://hackaday.io/project/164346-andxor-dc27-badge/log/166065-ftdi-2232h-breakout-for-hardware-hacking)
 - [Programming SPI flash with an FT232H breakout](https://learn.adafruit.com/programming-spi-flash-prom-with-an-ft232h-breakout)
 - [A tool for reading and writing data in SPI flash memory chips using a FT232H (TOO SLOW!!!)](https://github.com/swharden/FTFlash)
+- [Binwalk](https://www.kali.org/tools/binwalk/)
