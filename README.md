@@ -16,8 +16,8 @@ The perfect way to avoid interference would be to simply desolder the Flash IC s
 | FT232H  |  NOR Flash  | Description                                            |
 | ------- | ----------- | ------------------------------------------------------ |
 | AD0     | CLK         | Clock - Idles low, levels are sampled on the rising edge |
-| AD1     | MOSI (DI)   | Master Out Serial In - FT232H shifts data to the module |
-| AD2     | MISO (DO)   | Master In Serial Out - FT232H reads data from the module |
+| AD1     | MOSI (DI)   | Master Out Serial In - FT232H shifts data to the memory |
+| AD2     | MISO (DO)   | Master In Serial Out - FT232H reads data from the memory |
 | AD3     | CS          | Cable Select - Idles high, FT232H pulls low to initiate commands |
 | +3.3V   | VCC         | 3.3V output of the regulator on FT232H module     |
 | GND     | GND         | Common ground     |
