@@ -33,13 +33,13 @@ sudo apt-get install binwalk
 
 flashrom is a utility for identifying, reading, writing, verifying and erasing flash chips. It is designed to flash BIOS/EFI/coreboot/firmware/optionROM images on mainboards, network/graphics/storage controller cards, and various other programmer devices.
 
-### Read from NOR flash and dump to `dump.bin`:
+### Read from NOR flash and dump to a file named `dump.bin`:
 
 ```bash
 flashrom -p ft2232_spi:type=232H,port=A -r dump.bin
 ```
 
-### Write to NOR flash from `dump.bin`:
+### Write to NOR flash from the file `dump.bin`:
 
 ```bash
 flashrom -p ft2232_spi:type=232H,port=A -w dump.bin
