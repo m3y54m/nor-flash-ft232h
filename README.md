@@ -1,5 +1,27 @@
 # Read / Write NOR Flash Data Using FT232H
 
+If you are trying to hack a hardware it is necessary to have a backup of flash memories on the hardware. I use a module based on FT232H for this purpuse.
+FT232H (or FT2232H and similar chps) can read and write NOR flash memories through SPI interface.
+
+![image](https://github.com/m3y54m/nor-flash-ft232h/assets/1549028/4141005e-8237-452d-9b51-b7c07e2b40a7)
+
+## Hardware Connection
+
+The perfect way to avoid interference would be to simply desolder the Flash IC so it’s completely isolated from the rest of the circuit.
+
+![image](https://github.com/m3y54m/nor-flash-ft232h/assets/1549028/67e66e1c-8931-4944-9528-ff1e8aa39075)
+
+![image](https://github.com/m3y54m/nor-flash-ft232h/assets/1549028/9f221afd-f15d-4b2e-a1c3-2f859e720446)
+
+| FT232H  |  NOR Flash  | Description                                            |
+| ------- | ----------- | ------------------------------------------------------ |
+| AD0     | CLK         | Clock - Idles low, levels are sampled on the rising edge |
+| AD1     | MOSI (DI)   | Master Out Serial In - FT232H shifts data to the module |
+| AD2     | MISO (DO)   | Master In Serial Out - FT232H reads data from the module |
+| AD3     | CS          | Cable Select - Idles high, FT232H pulls low to initiate commands |
+| +3.3V   | VCC         | 3.3V output of the regulator on FT232H module     |
+| GND     | GND         | Common ground     |
+
 ## Requirements
 
 ```bash
